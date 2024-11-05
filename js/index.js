@@ -120,12 +120,12 @@ for (let i = 0; i <arrayDeObjetos.length; i++) {
 
 let buscador = prompt("Que producto desea buscar?").toString()
 
-const filtradoUsuario = arrayDeObjetos.filter((Element) => Element.producto === buscador).toString()
+const filtradoUsuario = arrayDeObjetos.find((Element) => Element.producto === buscador)
 
 console.log(filtradoUsuario)
 
 if (filtradoUsuario) {
-    alert("El producto seleccionado es " + filtradoUsuario);
+    alert("El producto seleccionado es " + filtradoUsuario.producto);
   } 
     else {
     alert("El producto que desea no esta disponible");
