@@ -1,0 +1,84 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#contenedorProductos {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.productos {
+    margin-bottom: 20px;
+}
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #154f17;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff00d4;
+}
+
+#carrito {
+    margin: 20px 0;
+    text-align: left;
+}
+
+#total {
+    font-weight: bold;
+    color: #333;
+}

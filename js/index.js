@@ -57,7 +57,7 @@ function simuladorPreciofinal () {
 
 simuladorPreciofinal()
 
-============================ entregable 1 ========================================*/
+============================ entregable 1 ========================================
 
 const arrayDeObjetos = [
     {
@@ -130,3 +130,4 @@ if (filtradoUsuario) {
     else {
     alert("El producto que desea no esta disponible");
   }
+*/

@@ -3,20 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    
     <title>Clase Coderhouse</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
     <header>
-
         <h1>Clase de JS</h1>
-
-
+        <nav>
+            <a href="index.html">Productos</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
 
     </header>
     
+    <div id="contenedorProductos">
+        <h2>Panaderia</h2>
+        <div class="productos">
+            <div class="producto" id="producto1">
+                <p>Criollos comunes</p>
+                <p>$100</p>
+                <button onclick="addToCart('Producto 1', 100)">Agregar</button>
+            </div>
+
+            <div class="producto" id="producto2">
+                <p>Criollos hojaldre</p>
+                <p>$80</p>
+                <button onclick="addToCart('Producto 2', 80)">Agregar</button>
+            </div>
+
+            <div class="producto" id="producto3">
+                <p>Facturas de crema</p>
+                <p>$600</p>
+                <button onclick="addToCart('Producto 3', 600)">Agregar</button>
+            </div>
+
+            <div class="producto" id="producto4">
+                <p>Facturas de membrillo</p>
+                <p>$600</p>
+                <button onclick="addToCart('Producto 4', 600)">Agregar</button>
+            </div>
+
+            <div class="producto" id="producto5">
+                <p>Medialunas</p>
+                <p>$500</p>
+                <button onclick="addToCart('Producto 5', 500)">Agregar</button>
+            </div>
+
+            <div class="producto" id="producto6">
+                <p>Pan casero</p>
+                <p>$1600</p>
+                <button onclick="addToCart('Producto 6', 1600)">Agregar</button>
+            </div>
+        </div>
+
+        <h3>Tu Carrito</h3>
+        <div id="Carrito"></div>
+        <p>Total: $<span id="total">0</span></p>
+    </div>
 
 <script defer src="./js/index.js"></script>
 
