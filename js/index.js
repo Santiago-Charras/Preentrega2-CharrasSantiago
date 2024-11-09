@@ -131,3 +131,76 @@ if (filtradoUsuario) {
     alert("El producto que desea no esta disponible");
   }
 */
+
+
+/* =========================  */
+
+
+
+
+
+
+
+
+const carrito = JSON.parse(localStorage.getItem("carrito")) || []
+
+function renderizarProductos(array) {
+
+    contenedorProductos.innerHTML = ""
+
+    array.forEach(element => {
+
+        const div = document.createElement("div")
+
+        div.innerHTML = `
+        <h3>${element.nombre}</h3>
+        <p>Precio: $${element.precio}</p>
+
+        <button id="agregar${element.id}">Agregar</button>
+        `
+
+        contenedorProductos.append(div)
+
+        const botonAgregar = document.getElementById(`agregar${element.id}`)
+
+        botonAgregar.addEventListener("click", () => {
+            agregarAlCarrito(element.id)
+            // playAddToCartSound()
+        })
+    });
+
+}
+
+function agregarAlCarrito(productoId) {
+
+    const product = productos.find(e => e.id === productoId)
+    const cartItem = carrito.find(e => e.id === productoId)
+
+    if (cartItem) {
+        cartItem.cantidad += 1
+    } else {
+        carrito.push({ ...product, cantidad: 1 })
+    }
+
+guardarCarrito()
+}
+
+
+
+/*function playAddToCartSound() {
+    const audio = new Audio("../sonidos/sonidosDeCompra.mp3"); 
+    audio.play();
+    
+}*/
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderizarProductos(productos)
+})
+
+const guardarCarrito = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
