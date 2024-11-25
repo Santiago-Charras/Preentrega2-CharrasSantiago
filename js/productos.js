@@ -33,4 +33,19 @@ const productos = [
     },
 ]
 
-const contenedorProductos = document.getElementById("contenedorProductos")
+const contenedorProductos = document.getElementById("contenedorProductos");
+
+productos.map((element) => {
+    const div = document.createElement("div");
+
+    div.innerHTML = `
+        <h3>${element.nombre}</h3>
+        <p>Precio: $${element.precio}</p>
+    `;
+
+    contenedorProductos.appendChild(div);
+
+    div.addEventListener("click", () => {
+        console.log(`Se agregó el producto con id: ${element.id}`)
+    })
+})
